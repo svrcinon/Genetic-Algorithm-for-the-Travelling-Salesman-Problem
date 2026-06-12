@@ -63,7 +63,7 @@ The algorithm typically only approaches the optimum — due to its stochastic na
 ## Project Structure
 
 * Travelling_Salesman_Problem.ipynb.ipynb          # genetic algorithm implementation
-* A Mathematical Perspective on TSP in Czech.pdf   # accompanying paper with the problem definition and algorithm description (in Czech)
+* TSP_Genetic_Algorithm_EN.pdf   # accompanying paper with the problem definition and algorithm description 
 * README.md
 
 ## References
