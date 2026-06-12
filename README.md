@@ -23,31 +23,31 @@ numpy
 pandas
 matplotlib
 
-pip install numpy pandas matplotlib
+bash pip install numpy pandas matplotlib
 
 
 ## Usage
 
 Open the notebook Travelling_Salesman_Problem.ipynb (Jupyter Lab / Jupyter Notebook) and run the cells from top to bottom:
 
-bashjupyter notebook TSP.ipynb
-
 The main entry point:
 
-pythonham_cycle = geneticAlgorithm(
-    population=cityList,   # list of cities (City instances)
+```
+pythonham_cycle = geneticAlgorithm( 
+    population=cityList,   # list of cities (City instances) 
     popSize=50,            # population size
     eliteSize=10,          # number of elite individuals
     mutationRate=0.01,     # mutation probability (per gene)
     generations=500        # number of generations
 )
+```
 
 Runtime for 25 cities and 500 generations is approximately 10–15 s. If you want to have random citties each time, you can comment chosem 25 cities and uncommnet random citties above in Graph Definition (cell 15).
 
 
 ## Outputs
 
-konvergence.png — convergence of the best distance in the population over generations
+konvergence.png — convergence of the best distance in the population over generations \
 ham.png — visualization of the resulting Hamiltonian cycle through all cities
 
 
@@ -61,5 +61,5 @@ The algorithm typically only approaches the optimum — due to its stochastic na
 
 ## References
 
-STOLTZ, Eric. Evolution of a salesman: A complete genetic algorithm tutorial for Python. Towards Data Science, 2018. (code base, adapted and extended)
+STOLTZ, Eric. Evolution of a salesman: A complete genetic algorithm tutorial for Python. Towards Data Science, 2018. (code base, adapted and extended) \
 ZELINKA, Ivan. Evoluční výpočetní techniky: principy a aplikace. Prague: BEN — technická literatura, 2009. ISBN 978-80-7300-218-3.
