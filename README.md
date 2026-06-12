@@ -1,7 +1,5 @@
 # Genetic-Algorithm-for-the-Travelling-Salesman-Problem
 
-A Python implementation of a genetic algorithm for the Travelling Salesman Problem (TSP). The goal is to find a Hamiltonian cycle with the lowest total edge weight — i.e. the shortest closed route through all cities, visiting each city exactly once.
-
 ## Problem Description
 
 Given a complete undirected weighted graph, where nodes represent cities with coordinates (x, y) in the plane and the weight of each edge is the Euclidean distance between the cities. The problem is NP-hard — no polynomial-time algorithm is known, which makes heuristics such as genetic algorithms a suitable approach.
