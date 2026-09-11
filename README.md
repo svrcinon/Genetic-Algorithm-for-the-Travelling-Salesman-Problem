@@ -49,7 +49,7 @@ pythonham_cycle = geneticAlgorithm(
 )
 ```
 
-Runtime for 25 cities and 500 generations is approximately 10–15 s. If you want to have random citties each time, you can comment chosem 25 cities and uncommnet random citties above in Graph Definition (cell 15).
+Runtime for 25 cities and 500 generations is approximately 10–15 s. If you want to have random cities each time, you can comment chosen 25 cities and uncommnet random cities above in Graph Definition (cell 15).
 
 
 ## Outputs
