@@ -9,7 +9,7 @@ A Python implementation of a genetic algorithm for the Travelling Salesman Probl
 
 ## Problem Description
 
-Given a complete undirected weighted graph, where nodes represent cities with coordinates (x, y) in the plane and the weight of each edge is the Euclidean distance between the cities. The problem is NP-hard — no polynomial-time algorithm is known, which makes heuristics such as genetic algorithms a suitable approach.
+Consider a complete undirected weighted graph in which each node represents a city with coordinates (x,y) in the plane, and the weight of each edge is the Euclidean distance between the corresponding cities. The problem is NP-hard — no polynomial-time algorithm is known, which makes heuristics such as genetic algorithms a suitable approach.
 
 ## How the Algorithm Works
 
@@ -49,7 +49,7 @@ pythonham_cycle = geneticAlgorithm(
 )
 ```
 
-Runtime for 25 cities and 500 generations is approximately 10–15 s. If you want to have random cities each time, you can comment chosen 25 cities and uncommnet random cities above in Graph Definition (cell 15).
+Runtime for 25 cities and 500 generations is approximately 10–15 s. To use random cities on each run, comment out the 25 fixed cities and uncomment the random generation above
 
 
 ## Outputs
@@ -58,7 +58,7 @@ konvergence.png — convergence of the best distance in the population over gene
 ham.png — visualization of the resulting Hamiltonian cycle through all cities
 
 
-The algorithm typically only approaches the optimum — due to its stochastic nature (mutation, roulette-wheel selection) it is not guaranteed to find the global minimum. Convergence correctness can be verified on cities generated on a circle (optionally with added noise), where the optimal solution is known — see the appendix of the accompanying PDF.
+The algorithm typically only approaches the optimum — due to its stochastic nature (mutation, roulette-wheel selection) it is not guaranteed to find the global minimum. Correct convergence can be verified on cities generated on a circle (optionally with added noise), where the optimal solution is known — see the appendix of the accompanying PDF.
 
 ## Project Structure
 
