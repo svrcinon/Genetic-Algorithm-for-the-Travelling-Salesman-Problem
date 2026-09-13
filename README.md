@@ -14,23 +14,17 @@ Consider a complete undirected weighted graph in which each node represents a ci
 ## How the Algorithm Works
 
 
-Initial population — popSize random Hamiltonian cycles (random permutations of cities) are generated.
-Evaluation (fitness) — each cycle is scored as 1 / route length, turning the minimization problem into a maximization one.
-Selection — the best individuals (an elite of size eliteSize) survive automatically; the remaining parents are chosen by roulette-wheel selection based on the cumulative fitness percentile.
-Crossover — a random segment of the route is taken from one parent and the rest is filled in with the cities of the second parent in their original order (ordered crossover), so that no city is repeated.
-Mutation — with probability mutationRate, two cities in the cycle swap positions, which helps escape local minima.
-Steps 2–5 are repeated for generations generations.
+1. Initial population — popSize random Hamiltonian cycles (random permutations of cities) are generated.
+2. Evaluation (fitness) — each cycle is scored as 1 / route length, turning the minimization problem into a maximization one.
+3. Selection — the best individuals (an elite of size eliteSize) survive automatically; the remaining parents are chosen by roulette-wheel selection based on the cumulative fitness percentile.
+4. Crossover — a random segment of the route is taken from one parent and the rest is filled in with the cities of the second parent in their original order (ordered crossover), so that no city is repeated.
+5. Mutation — with probability mutationRate, two cities in the cycle swap positions, which helps escape local minima.
+Steps 2–5 are repeated for generations.
 
 
 ## Requirements
 
-
-Python 3.8+
-numpy
-pandas
-matplotlib
-
-bash pip install numpy pandas matplotlib
+Python module: Python 3.8+, pip install -r requirements.txt
 
 
 ## Usage
@@ -40,7 +34,7 @@ Open the notebook Travelling_Salesman_Problem.ipynb (Jupyter Lab / Jupyter Noteb
 The main entry point:
 
 ```
-pythonham_cycle = geneticAlgorithm( 
+ham_cycle = geneticAlgorithm( 
     population=cityList,   # list of cities (City instances) 
     popSize=50,            # population size
     eliteSize=10,          # number of elite individuals
@@ -49,7 +43,7 @@ pythonham_cycle = geneticAlgorithm(
 )
 ```
 
-Runtime for 25 cities and 500 generations is approximately 10–15 s. To use random cities on each run, comment out the 25 fixed cities and uncomment the random generation above
+Runtime for 25 cities and 500 generations is approximately 10–15 s. To use random cities on each run, comment out the 25 fixed cities and uncomment the random generation above.
 
 
 ## Outputs
@@ -62,7 +56,7 @@ The algorithm typically only approaches the optimum — due to its stochastic na
 
 ## Project Structure
 
-* Travelling_Salesman_Problem.ipynb.ipynb          # genetic algorithm implementation
+* Travelling_Salesman_Problem.ipynb          # genetic algorithm implementation
 * TSP_Genetic_Algorithm_EN.pdf   # accompanying paper with the problem definition and algorithm description 
 * README.md
 
